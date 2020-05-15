@@ -1,0 +1,46 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const colors = require('colors');
+const program = require('commander');
+// const { prompt } = require('inquirer');
+
+const temps = require('../templates');
+
+const fileFromTemplate = (path, template) => {
+  fs.writeFile(path, template, (err) => {
+    if (err) {
+      return console.log(err);
+    }
+    console.log(`${path} created`);
+  });
+};
+
+program
+  .version('0.0.1')
+  .description('JSMidi CLI');
+
+program
+  .command('new <name>')
+  .description('create a new jsmidi project')
+  .option('-c, --clean', 'no comments')
+  .action((name, args) => {
+    if (fs.existsSync(name)) {
+      console.log(
+        colors.red(`Error: a folder named "${name}" already exists.`)
+      );
+      return;
+    }
+
+    fs.mkdirSync(name);
+    fs.mkdirSync(`./${name}/lib`);
+
+    fileFromTemplate(`./${name}/.gitignore`, temps.gitignore());
+    fileFromTemplate(`./${name}/.eslintrc.json`, temps.eslintrc());
+    fileFromTemplate(`./${name}/package.json`, temps.package(name));
+    fileFromTemplate(`./${name}/jsmidi.config.json`, temps.config());
+    fileFromTemplate(`./${name}/Project.js`, temps.project(args.clean));
+    fileFromTemplate(`./${name}/Live.js`, temps.live(args.clean));
+  });
+
+program.parse(process.argv);

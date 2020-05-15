@@ -1,0 +1,19 @@
+{
+  "name": "jsmidi-cli",
+  "version": "1.0.0",
+  "description": "JSMidi CLI",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "jsmidi": "bin/jsmidi"
+  },
+  "author": "Aaron Strachan <aaronats@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "commander": "^4.1.1",
+    "inquirer": "^7.0.6"
+  }
+}
