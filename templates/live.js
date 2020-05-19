@@ -36,10 +36,10 @@ class Live {
     }
     const { piano } = JSMidi.tracks;
     ${ clean ? '' : `
-    // Finally play note C4 at every 0 position and hold
+    // Finally play note C4 at every 1 beat and hold
     // for 1/2 a beat.`
     }
-    piano.play('*:*:0', { notes: 'C4', hold: 0.5 });
+    piano.play('*:*:1', { notes: 'C4', hold: 0.5 });
   }
 }
 ${ clean ? '' : `
