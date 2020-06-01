@@ -19,18 +19,18 @@ ${ clean ? '' : `
 }
 class Project extends JSMidiProject {
   setup() {${ clean ? '' : `
-    // Here we can modify or loop properties like changing its
-    // bars and beats, adding parts or setting the repeat property.`
+    // Here we can modify our loop properties like changing its
+    // bars and beats, adding parts or enabling repeat.`
     }
     JSMidi.loop.update({ bars: 2, beats: 12 });
     ${ clean ? '' : `
-    // Here we create a new instrument called 'piano'.
-    // Note that the default midi channel is 0.`
+    // Here we create a new instrument called 'piano'
+    // on MIDI channel 0 (default).`
     }
-    const piano = new JSMidiInstrument('piano');
+    const piano = new JSMidiInstrument('piano', { channel: 0 });
     ${ clean ? '' : `
     // Then we need to add that instrument to JSMidi tracks
-    // so we can grab it in the Live file`
+    // so we can grab it in the Live.js file.`
     }
     JSMidi.addTrack(piano);
   }

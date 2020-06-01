@@ -29,15 +29,15 @@ class Live {
     // is not required here, this is where you would
     // control the tempo.`
     }
-    JSMidi.loop.setTempo(120);
+    JSMidi.setTempo(120);
     ${ clean ? '' : `
     // Grab any instrument(s) that you have defined and
     // added to JSMidi tracks in your project file.`
     }
     const { piano } = JSMidi.tracks;
     ${ clean ? '' : `
-    // Finally play note C4 at every 1 beat and hold
-    // for 1/2 a beat.`
+    // Finally play note C4 at every first beat and hold
+    // for 1/2 a note.`
     }
     piano.play('*:*:1', { notes: 'C4', hold: 0.5 });
   }
