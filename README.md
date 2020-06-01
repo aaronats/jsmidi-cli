@@ -2,10 +2,10 @@
 
 The `jsmidi-cli` is a command line tool for creating new JSMidi Projects. It creates
 the files and configurations needed to work with
-[JSMidi](https://github.com/aaronats/jsmidi-cli) and the
+[JSMidi](https://github.com/aaronats/jsmidi) and the
 [JSMidi Atom Plugin](https://github.com/aaronats/jsmidi-atom).
 
-#### Installation
+### Installation
 
 Globally install `jsmidi-cli` using the [npm](https://www.npmjs.com/) package manager.
 
@@ -48,7 +48,7 @@ $ jsmidi new myproject --clean
 ```
 
 
-#### Project Structure
+### Project Structure
 
 Below is a breakdown of the project structure when you create a new project.
 
@@ -62,16 +62,16 @@ Below is a breakdown of the project structure when you create a new project.
 |-- Live.js
 ```
 
-###### Project.js
+#### Project.js
 
 The `Project.js` file is where we setup the loop, tempo, define instruments and add those
 instruments to JSMidi tracks.
 
-###### Live.js
+#### Live.js
 
 The `Live.js` file is where we "play" our instruments and live code.
 
-###### Lib Folder
+#### Lib Folder
 
 The `lib` folder is where we can require additional files in our project. For example
 since you can extend JSMidi Instruments you may want to create a drum and add your
@@ -83,7 +83,7 @@ own functions like a fill, symbol crash, etc. You can add those files to the
 const drums = require('lib/drums');
 ```
 
-###### Config File
+#### Config File
 
 The `jsmidi.config.json` file is where we store information we need when building
 a JSMidi Project. If for some reason you would like to change the name of the
