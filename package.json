@@ -1,16 +1,25 @@
 {
   "name": "jsmidi-cli",
-  "version": "1.0.0",
-  "description": "JSMidi CLI",
+  "version": "0.0.0",
+  "description": "JSMidi command line interface",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/aaronats/jsmidi-cli.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "jsmidi",
+    "jsmidi-atom",
+    "midi"
+  ],
   "preferGlobal": true,
   "bin": {
     "jsmidi": "bin/jsmidi"
   },
   "author": "Aaron Strachan <aaronats@gmail.com>",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {
     "colors": "^1.4.0",
     "commander": "^4.1.1",
