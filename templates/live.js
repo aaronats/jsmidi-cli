@@ -1,6 +1,6 @@
 /* eslint-disable */
 module.exports = (clean = false) => {
-return `const { JSMidi } = require('jsmidi');
+return `const { JSMidi } = require('@jsmidi/core');
 ${ clean ? '' : `
 /**
  * This is our Live file where we do our live coding :)

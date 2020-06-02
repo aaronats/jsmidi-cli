@@ -4,7 +4,7 @@ return `const {
   JSMidi,
   JSMidiProject,
   JSMidiInstrument
-} = require('jsmidi');
+} = require('@jsmidi/core');
 ${ clean ? '' : `
 /**
  * This is our Project file where we setup our project, create
