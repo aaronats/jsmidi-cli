@@ -29,7 +29,7 @@ class Live {
     // is not required here, this is where you would
     // control the tempo.`
     }
-    JSMidi.setTempo(120);
+    JSMidi.loop.setTempo(120);
     ${ clean ? '' : `
     // Grab any instrument(s) that you have defined and
     // added to JSMidi tracks in your project file.`
