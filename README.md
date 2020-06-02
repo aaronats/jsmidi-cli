@@ -1,16 +1,16 @@
 ## JSMidi CLI
 
-The `jsmidi-cli` is a command line tool for creating new JSMidi Projects. It creates
+The `@jsmidi/cli` is a command line tool for creating new JSMidi Projects. It creates
 the files and configurations needed to work with
 [JSMidi](https://github.com/aaronats/jsmidi) and the
 [JSMidi Atom Plugin](https://github.com/aaronats/jsmidi-atom).
 
 ### Installation
 
-Globally install `jsmidi-cli` using the [npm](https://www.npmjs.com/) package manager.
+Globally install `@jsmidi/cli` using the [npm](https://www.npmjs.com/) package manager.
 
 ```
-$ npm install -g jsmidi-cli
+$ npm install -g @jsmidi/cli
 ```
 
 #### Usage
