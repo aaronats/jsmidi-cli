@@ -2,15 +2,15 @@
 module.exports = (name = 'jsmid-song') => {
 return `{
   "name": "${name}",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.0",
+  "description": "A JSMidi project",
   "main": "Project.js",
   "scripts": {
     "test": "echo \\"Error: no test specified\\" && exit 1"
   },
   "license": "ISC",
   "dependencies": {
-    "jsmidi": "file:~/projects/jsmidi"
+    "jsmidi": "^0.0.0"
   }
 }
 `;
