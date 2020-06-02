@@ -10,7 +10,7 @@ return `{
   },
   "license": "ISC",
   "dependencies": {
-    "jsmidi": "^0.0.0"
+    "@jsmidi/core": "^0.0.0"
   }
 }
 `;
