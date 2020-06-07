@@ -17,7 +17,7 @@ const fileFromTemplate = (path, template) => {
 };
 
 program
-  .version('0.0.1')
+  .version('0.0.2')
   .description('JSMidi CLI');
 
 program
@@ -39,6 +39,7 @@ program
     fileFromTemplate(`./${name}/.eslintrc.json`, temps.eslintrc());
     fileFromTemplate(`./${name}/package.json`, temps.package(name));
     fileFromTemplate(`./${name}/jsmidi.config.json`, temps.config());
+    fileFromTemplate(`./${name}/README.md`, temps.readme());
     fileFromTemplate(`./${name}/Project.js`, temps.project(args.clean));
     fileFromTemplate(`./${name}/Live.js`, temps.live(args.clean));
   });
