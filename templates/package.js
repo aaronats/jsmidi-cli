@@ -1,5 +1,5 @@
 /* eslint-disable */
-module.exports = (name = 'jsmid-song') => {
+module.exports = (name = 'jsmid-project') => {
 return `{
   "name": "${name}",
   "version": "0.0.0",
