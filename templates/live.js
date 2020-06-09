@@ -36,10 +36,14 @@ class Live {
     }
     const { piano } = JSMidi.tracks;
     ${ clean ? '' : `
-    // Finally play note C4 at every first beat and hold
-    // for 1/2 a note.`
+    // Play notes C2 and E2 at on every beat and hold for 1/2 a note.`
     }
-    piano.play('*:*:1', { notes: 'C4', hold: 0.5 });
+    piano.play('*:*:*', { notes: ['C2', 'E2'], hold: 0.5 });
+    ${ clean ? '' : `
+    // Play chord C4 minor at on every first and fifth and hold for
+    // 2 whole notes.`
+    }
+    piano.play('*:*:1,5', { chord: 'C4m', hold: 2 });
   }
 }
 ${ clean ? '' : `
