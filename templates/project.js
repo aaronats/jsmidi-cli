@@ -29,10 +29,10 @@ class Project extends JSMidiProject {
     }
     const piano = new JSMidiInstrument('piano', { channel: 0 });
     ${ clean ? '' : `
-    // Then we need to add that instrument to JSMidi tracks
+    // Then we need to add our instrument(s) to JSMidi tracks
     // so we can grab it in the Live.js file.`
     }
-    JSMidi.addTrack(piano);
+    JSMidi.addTracks([piano]);
   }
 }
 ${ clean ? '' : `
