@@ -1,6 +1,6 @@
 {
   "name": "@jsmidi/cli",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "JSMidi command line interface",
   "repository": "https://github.com/aaronats/jsmidi-cli",
   "scripts": {
